@@ -1,11 +1,17 @@
 .photo-list__item {
-  margin: 24px;
   padding: 8px;
   border-width: 0.5px;
-  border-color: lightgray;
+  border-color: rgb(199, 199, 199);
   border-style: solid;
-  border-radius: 8px;
+  border-radius: 16px;
   max-width: fit-content;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.photo-list__item:hover {
+  scale: 1.01;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 40, 0.2);
 }
 
 .photo-list__image {
