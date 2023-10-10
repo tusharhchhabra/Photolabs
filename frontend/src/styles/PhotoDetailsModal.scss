@@ -1,15 +1,16 @@
 .photo-details-modal {
   background-color: white;
   box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
-  position: absolute;
-  top: 55%;
+  position: fixed;
+  z-index: 1001;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
-  height: 80%;
+  height: 70%;
   width: 55%;
   overflow-y: scroll;
   border-radius: 12px;
-  padding: 16px;
+  padding: 24px;
 }
 
 .photo-details-modal > .photo-list__fav-icon {
@@ -39,8 +40,7 @@
 
 .photo-details-modal__image {
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 12px auto;
 }
 
 .photo-details-modal__images {

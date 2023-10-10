@@ -1,18 +1,24 @@
 .photo-list__fav-icon {
   position: relative;
-  top: 8px;
-  right: -8px;
+  top: 12px;
+  right: -10px;
   cursor: pointer;
   margin-bottom: -30px;
   border-width: 0.1px;
-  background-color: #EEEEEE;
+  background: rgba(255, 255, 255, 0.8);
+  // backdrop-filter: blur(20px);
   width: 32px;
   height: 32px;
   text-align: center;
   border-radius: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(240, 240, 240, 1);
+    scale: 1.03;
+  }
 }
 
 .photo-list__fav-icon-svg {
-  padding: 7px;
-  top: 2px;
+  padding: 8px 7px 7px 7px;
 }

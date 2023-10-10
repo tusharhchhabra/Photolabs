@@ -1,6 +1,7 @@
 .topic-list__item {
   line-height: 24px;
-  margin-left: 24px;
+  margin: 0 12px;
+  padding-top: 4px;
 }
 
 .topic-list__item span {
@@ -8,9 +9,11 @@
   text-decoration: none;
   font-weight: 500;
   color: #2b2b2b;
-
+  transition: 0.2s;
+  border-top: 2px solid transparent;
+  padding-top: 5px;
+  
   &:hover {
-    text-decoration: overline;
-    color: #111;
+    border-top-color: black;
   }
 }
