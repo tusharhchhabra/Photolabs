@@ -1,10 +1,18 @@
 import React from 'react';
 
 import '../styles/TopNavigationBar.scss';
+import '../styles/Searchbar.scss';
 import TopicList from './TopicList';
 import FavBadge from './FavBadge';
+import Searchbar from './Searchbar';
 
-const TopNavigation = ({ topics, setPhotosByTopics, isFavPhotoExist }) => {
+const TopNavigation = ({
+  topics,
+  setPhotosByTopics,
+  isFavPhotoExist,
+  searchTerm,
+  setSearchTerm
+}) => {
   return (
     <div className="top-nav-bar">
       <div className="top-nav-bar-content">
@@ -13,6 +21,7 @@ const TopNavigation = ({ topics, setPhotosByTopics, isFavPhotoExist }) => {
           topics={topics}
           setPhotosByTopics={setPhotosByTopics}
         />
+        <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <FavBadge isFavPhotoExist={isFavPhotoExist} />
       </div>
     </div>

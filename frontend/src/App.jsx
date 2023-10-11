@@ -15,18 +15,23 @@ const App = () => {
     removePhotoDetails,
     favoritePhotos,
     setPhotosByTopics,
-    toggleFavorite
+    toggleFavorite,
+    searchTerm,
+    setSearchTerm,
+    filteredPhotos
   } = useApplicationData();
 
   return (
     <div className="App">
       <HomeRoute
         topics={topicData}
-        photos={photoData}
+        photos={searchTerm ? filteredPhotos : photoData}
         showPhotoDetails={showPhotoDetails}
         setPhotosByTopics={setPhotosByTopics}
         favoritePhotos={favoritePhotos}
         toggleFavorite={toggleFavorite}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
       />
       {selectedPhoto &&
         <PhotoDetailsModal

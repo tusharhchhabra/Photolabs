@@ -6,7 +6,8 @@ const ACTIONS = {
   SHOW_PHOTO_DETAILS: 'SHOW_PHOTO_DETAILS',
   REMOVE_PHOTO_DETAILS: 'REMOVE_PHOTO_DETAILS',
   SET_FAVORITE_PHOTOS: 'SET_FAVORITE_PHOTOS',
-  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE'
+  TOGGLE_FAVORITE: 'TOGGLE_FAVORITE',
+  SEARCH_PHOTOS: 'SEARCH_PHOTOS'
 };
 
 function reducer(state, action) {
@@ -40,7 +41,20 @@ function reducer(state, action) {
           favoritePhotos: [...state.favoritePhotos, photo],
         };
       }
-
+    case ACTIONS.SEARCH_PHOTOS: {
+      const value = action.value.toLowerCase();
+      const filteredPhotos = state.photoData.filter(
+        photo => photo.user.username.toLowerCase().includes(value) ||
+          photo.user.name.toLowerCase().includes(value) ||
+          photo.location.city.toLowerCase().includes(value) ||
+          photo.location.country.toLowerCase().includes(value)
+      );
+      return {
+        ...state,
+        searchTerm: value,
+        filteredPhotos
+      };
+    }
     default:
       throw new Error(
         `Unsupported action type: ${action.type}`
@@ -83,6 +97,8 @@ const initialState = {
   topicData: [],
   selectedPhoto: null,
   favoritePhotos: [],
+  searchTerm: "",
+  filteredPhotos: []
 };
 
 // CUSTOM HOOK
@@ -130,6 +146,10 @@ const useApplicationData = () => {
     fetchData(`/api/topics/photos/${id}`, `${STORAGE_KEYS.PHOTOS_FOR_TOPIC}_${id}`, setPhotoData);
   };
   const toggleFavorite = (id) => dispatch({ type: ACTIONS.TOGGLE_FAVORITE, id });
+  const setFilteredPhotos = (value) => dispatch({ type: ACTIONS.SEARCH_PHOTOS, value });
+  const setSearchTerm = (value) => {
+    setFilteredPhotos(value);
+  };
 
 
   return {
@@ -137,7 +157,8 @@ const useApplicationData = () => {
     showPhotoDetails,
     removePhotoDetails,
     setPhotosByTopics,
-    toggleFavorite
+    toggleFavorite,
+    setSearchTerm
   };
 };
 
