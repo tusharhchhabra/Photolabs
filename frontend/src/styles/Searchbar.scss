@@ -1,14 +1,17 @@
-.search-bar-input {
+.search-bar-input, .upload-photo-input-text {
   padding: 8px 12px;
-  background-color: rgb(0, 0, 10, 0.05);
+  background-color: rgb(0, 0, 40, 0.05);
   border: none;
   border-radius: 7px;
-  margin-right: 16px;
-  width: 200px;
   font-size: 16px;
-  outline: none;
+  // outline: 0.5px solid rgb(180, 180, 180);
 
   &:focus {
-    outline: 1px solid rgb(160, 160, 160);
+    outline: 1.5px solid rgb(150, 150, 150);
   }
+}
+
+.search-bar-input {
+  margin-right: 16px;
+  width: 200px;
 }

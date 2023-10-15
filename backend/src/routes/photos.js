@@ -60,5 +60,30 @@ module.exports = db => {
     });
   });
 
+  router.post("/photos", (request, response) => {
+    const { userId, fullUrl, regularUrl, city, country, topicId } = request.body
+
+    console.log("request made!")
+
+    console.log(userId, fullUrl, regularUrl, city, country, topicId);
+
+    // const query = `
+    //   INSERT INTO items(user_id, full_url, regular_url, city, country, topic_id)
+    //   VALUES ($1, $2, $3, $4, $5, $6);
+    // `;
+
+    // db.query(query, [
+    //   userId, 
+    //   fullUrl, 
+    //   regularUrl, 
+    //   city, 
+    //   country, 
+    //   topicId
+    // ])
+    // .then(({ rows }) => {
+    //   response.json(rows[0].photo_data);
+    // });
+  });
+
   return router;
 };

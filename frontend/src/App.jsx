@@ -4,6 +4,7 @@ import './App.scss';
 import HomeRoute from 'routes/HomeRoute';
 import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import useApplicationData from '../src/hooks/useApplicationData';
+// import UploadPhoto from './components/UploadPhoto'
 
 // Note: Rendering a single component to build components in isolation
 const App = () => {
@@ -41,6 +42,8 @@ const App = () => {
           favoritePhotos={favoritePhotos}
           toggleFavorite={toggleFavorite}
         />}
+
+        {/* <UploadPhoto /> */}
     </div>
   );
 };

@@ -33,6 +33,10 @@ const HomeRoute = (
           toggleFavorite={toggleFavorite}
           showPhotoDetails={showPhotoDetails}
         />}
+
+        <button className="new-photo-button">
+          Upload Photo
+        </button>
     </div>
   );
 };
