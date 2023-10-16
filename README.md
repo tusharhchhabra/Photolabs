@@ -16,25 +16,16 @@ PhotoLabs allows users to:
 
 <br/>
 
-## Setup
-
-Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
-
-### Webpack Development Server
-
+## Getting Started
+1. Clone this repository onto your local device.
+2. Install dependencies with `npm install` in each respective `/frontend` and `/backend` directory.
+3. Follow directions in `/backend` directory README before continuing.
+4. Run the following commands to start the frontend and backend server 
 ```sh
 cd frontend
 npm start
 ```
 
-## Backend Server
-
-Read `backend/readme` for further setup details.
-
-```sh
-cd backend
-npm start
-```
 <br/>
 
 ## Dependencies
