@@ -27,6 +27,7 @@ cd frontend
 npm start
 ```
 <br/>
+
 ### Backend Server
 
 Read `backend/readme` for further setup details.
@@ -36,6 +37,7 @@ cd backend
 npm start
 ```
 <br/>
+
 ## Dependencies
 
 ### Frontend
