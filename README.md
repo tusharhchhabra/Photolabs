@@ -15,6 +15,7 @@ PhotoLabs allows users to:
 * Get notified of the photos they've liked.
 
 <br/>
+
 ## Setup
 
 Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
