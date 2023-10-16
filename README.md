@@ -1,7 +1,7 @@
 # Photolabs: A React-based Photo Browsing App
 Welcome to Photolabs! This website was made as part of my Full Stack Web Development bootcamp at Lighthouse Labs.
 <br/><br/>
-Photolabs is a minimalist photography website where you can see photos shared by some really cool photographers. The website loads all photos at first, and from there you can drill down by category.
+Photolabs is a minimalist photography website where you can see photos shared by photographers. The website loads all photos at first, and from there you can drill down by category.
 
 !["Screenshot of Photolabs - Desktop View"](https://github.com/tusharhchhabra/photolabs-starter/blob/main/screenshot.jpg?raw=true)
 
@@ -14,18 +14,19 @@ PhotoLabs allows users to:
 * Like their favorite photos.
 * Get notified of the photos they've liked.
 
+<br/>
 ## Setup
 
 Install dependencies with `npm install` in each respective `/frontend` and `/backend`.
 
-### Running Webpack Development Server
+### Webpack Development Server
 
 ```sh
 cd frontend
 npm start
 ```
-
-### Backend Servier
+<br/>
+### Backend Server
 
 Read `backend/readme` for further setup details.
 
@@ -33,7 +34,7 @@ Read `backend/readme` for further setup details.
 cd backend
 npm start
 ```
-
+<br/>
 ## Dependencies
 
 ### Frontend
