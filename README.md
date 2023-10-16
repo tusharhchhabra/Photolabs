@@ -26,9 +26,8 @@ Install dependencies with `npm install` in each respective `/frontend` and `/bac
 cd frontend
 npm start
 ```
-<br/>
 
-### Backend Server
+## Backend Server
 
 Read `backend/readme` for further setup details.
 
@@ -40,7 +39,7 @@ npm start
 
 ## Dependencies
 
-### Frontend
+## Frontend
 * @testing-library/jest-dom
 * @testing-library/react
 * @testing-library/user-event
@@ -50,7 +49,7 @@ npm start
 * react-scripts
 * web-vitals
 
-### Backend
+## Backend
 * body-parser
 * cors
 * dotenv
